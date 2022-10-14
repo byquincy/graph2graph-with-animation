@@ -74,8 +74,9 @@ class RTplot():
         self.progress+=1
         print(self.progress)
 
+        plt.savefig(str(i)+".png", dpi=300)
         if self.progress==100:
-            # exit()
+            exit()
             self.progress = 0
 
     def addPoint(self, list):
@@ -97,9 +98,9 @@ class RTplot():
         plt.show()
 
 myFunc = userAddedFunction(
-    range=(10, 100, 0.1), 
-    coefficient={2: 5, 1: 6, 0: 5}, 
-    goalCoefficient={11: -1, }
+    range=(-20, 10, 0.1), 
+    coefficient={2: 1, }, 
+    goalCoefficient={4: 1, 3:20, 0: 20000}
 )
 
 if __name__ == "__main__":
